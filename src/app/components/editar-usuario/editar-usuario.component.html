@@ -1,0 +1,18 @@
+<h1>EDITAR USUARIO</h1>
+<form [formGroup]="profileForm" (ngSubmit)="guardar()">
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nombre</label>
+    <input type="text" formControlName="nombre">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Rol</label>
+    <input type="text" formControlName="rol">
+  </div>
+  <div class="mb-3 form-check">
+    <input type="checkbox" formControlName="activo">
+    <label class="form-check-label" for="exampleCheck1">¿Activo?</label>
+  </div>
+  <button type="submit" class="btn btn-primary">Guardar</button>
+  <button type="button" class="btn btn-danger" (click)="volver()">Cancelar</button>
+</form>
